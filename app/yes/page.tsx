@@ -50,7 +50,7 @@ export default function YesPage() {
         className="text-center mb-8"
       >
         <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">❤️ Love you! ❤️</h1>
-        <p className="text-xl md:text-2xl text-gray-800 mb-4">You make life so much fun. I'm so lucky to have you in my life!</p>
+        <p className="text-xl md:text-2xl text-gray-800 mb-4">You make life so much fun. I am so lucky to have you in my life!</p>
         <Link href="/" className="text-lg text-gray-600 hover:text-gray-800 underline">
           Back home
         </Link>
