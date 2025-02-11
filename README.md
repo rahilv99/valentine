@@ -4,7 +4,7 @@ A fun, interactive Valentine's Day website built with Next.js and Framer Motion.
 
 https://valentine-six-lake.vercel.app/
 
-![Valentine's Website Preview](add-a-screenshot-here)
+![Valentine's Website Preview](https://github.com/rahilv99/valentine/blob/main/website_preview.png)
 
 ## Features
 
