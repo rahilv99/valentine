@@ -103,7 +103,7 @@ export default function ValentineLandingPage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="text-4xl md:text-6xl font-bold text-pink-600 mb-6"
           >
-            Happy Valentine's Day!
+            Happy Valentines Day!
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
