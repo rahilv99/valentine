@@ -2,7 +2,7 @@
 
 A fun, interactive Valentine's Day website built with Next.js and Framer Motion. Features a playful "proposal" page with an impossible-to-click "No" button and a beautiful photo gallery page for when my girlfriend inevitably clicks "yes".
 
-[View Demo](add-your-demo-link-here)
+https://valentine-six-lake.vercel.app/
 
 ![Valentine's Website Preview](add-a-screenshot-here)
 
@@ -60,6 +60,9 @@ const imageUrls = [
 ]
 ```
 
+### Deploy Your Own! 
+Visit [vercel](https://vercel.com) to deploy your own website! It's as simple as connecting your GitHub repository.
+
 ### Modifying Colors
 The color scheme can be customized in the Tailwind classes within the components:
 - Main gradient: `from-pink-400 to-gray-200`
@@ -77,17 +80,5 @@ The color scheme can be customized in the Tailwind classes within the components
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Heart animations inspired by various CodePen examples
-- Masonry layout implemented using react-masonry-css
-- Special thanks to the Next.js and Framer Motion teams
-
----
 
 Made with ❤️ for spreading love
