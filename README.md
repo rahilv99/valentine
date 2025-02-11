@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Valentine's Day Website 💝
+
+A fun, interactive Valentine's Day website built with Next.js and Framer Motion. Features a playful "proposal" page with an impossible-to-click "No" button and a beautiful photo gallery page for when my girlfriend inevitably clicks "yes".
+
+[View Demo](add-your-demo-link-here)
+
+![Valentine's Website Preview](add-a-screenshot-here)
+
+## Features
+
+- 💘 Interactive landing page with animated hearts background
+- 🎯 Playful "No" button that dodges mouse hover
+- 🖼️ Beautiful masonry photo gallery
+- 💫 Smooth animations using Framer Motion
+- 📱 Fully responsive design
+- 🎨 Gradient backgrounds and modern UI
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+```bash
+git clone https://github.com/rahilv99/valentine.git
+```
 
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Changing Names
+Edit `app/page.tsx` to change the names and messages:
+```typescript
+// Find and modify these lines
+<h2>Hi Grace! Will you be my Valentine?</h2>
+<p>From Rahil</p>
+```
 
-## Learn More
+### Adding Your Photos
+1. Create a `public/happy_pics` directory
+2. Add your images (recommended size: 400x300px)
+3. Update the image URLs in `app/yes/page.tsx`:
+```typescript
+const imageUrls = [
+  "/happy_pics/IMG_01.jpg",
+  "/happy_pics/IMG_02.jpg",
+  // Add more images...
+]
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Modifying Colors
+The color scheme can be customized in the Tailwind classes within the components:
+- Main gradient: `from-pink-400 to-gray-200`
+- Buttons: `bg-pink-500`, `text-pink-500`
+- Text colors: `text-pink-600`, `text-gray-800`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js 14](https://nextjs.org/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hot Toast](https://react-hot-toast.com/)
+- [React Masonry CSS](https://www.npmjs.com/package/react-masonry-css)
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- Heart animations inspired by various CodePen examples
+- Masonry layout implemented using react-masonry-css
+- Special thanks to the Next.js and Framer Motion teams
+
+---
+
+Made with ❤️ for spreading love
