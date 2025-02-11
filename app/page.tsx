@@ -5,7 +5,11 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/navigation"
 import toast, { Toaster } from "react-hot-toast"
 
-const Button = ({ children, onClick, primary = false }: { children: React.ReactNode, onClick: () => void, primary?: boolean }) => (
+const Button = ({
+  children,
+  onClick,
+  primary = false,
+}: { children: React.ReactNode; onClick: () => void; primary?: boolean }) => (
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
@@ -19,7 +23,7 @@ const Button = ({ children, onClick, primary = false }: { children: React.ReactN
 )
 
 const NoButton = ({ onClick }: { onClick: () => void }) => {
-  const [x, setX] = useState(46)
+  const [x, setX] = useState(44)
 
   function mouseOver() {
     // Update the x-coordinate randomly, keeping the button within 80% of the screen width
@@ -28,7 +32,7 @@ const NoButton = ({ onClick }: { onClick: () => void }) => {
 
   return (
     <motion.button
-      className="absolute px-8 py-3 rounded-full text-xl font-bold shadow-lg transition-colors bg-white text-pink-500 hover:bg-pink-100"
+      className="absolute px-8 py-3 rounded-full text-sm font-bold shadow-lg transition-colors bg-white text-pink-500 hover:bg-pink-100"
       animate={{ left: `${x}%` }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       onMouseOver={mouseOver}
@@ -87,22 +91,45 @@ export default function ValentineLandingPage() {
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <HeartBackground />
       <main className="relative z-10 text-center">
-        <motion.h1
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
-          className="text-4xl md:text-6xl font-bold text-gray-800 mb-12"
+          className="rounded-3xl shadow-2xl p-8 max-w-2xl mx-auto bg-pink-200"
         >
-          Hi Grace! Will you be my Valentine?
-        </motion.h1>
-        <div className="space-y-4">
-          <Button primary onClick={handleYes}>
-            Yes
-          </Button>
-          <div className="h-20 relative w-full">
-            <NoButton onClick={handleNo} />
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="text-4xl md:text-6xl font-bold text-pink-600 mb-6"
+          >
+            Happy Valentine's Day!
+          </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="text-2xl md:text-4xl font-bold text-gray-800 mb-8"
+          >
+            Hi Grace! Will you be my Valentine?
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.9 }}
+            className="text-xl md:text-2xl font-medium text-gray-600 mb-8"
+          >
+            From Rahil
+          </motion.p>
+          <div className="space-y-4">
+            <Button primary onClick={handleYes}>
+              Yes
+            </Button>
+            <div className="h-20 relative w-full">
+              <NoButton onClick={handleNo} />
+            </div>
           </div>
-        </div>
+        </motion.div>
       </main>
       <Toaster />
     </div>
